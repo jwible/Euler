@@ -1,4 +1,4 @@
-"""
+"""How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?"""
 
 Cnt_Of_Mnths_Starting_W_Sun = 0
 Days_Since_Last_Cnt = 2 
