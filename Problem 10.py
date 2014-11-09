@@ -1,7 +1,7 @@
 """Find the sum of all the primes below two million."""
-
 limit = 2000000
 a = int (limit/6)  #checking primes at 6k+/- 1 so going to stop when limit/6 issue if limit or limit+1 is divisible by 6
+primes = [2,3] #need to start with 2,3 because theyre the only ones not in the pattern 
 k=1
 
 
