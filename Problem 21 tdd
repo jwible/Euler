@@ -1,0 +1,33 @@
+Enter file contents heredef FindSumOfDiv (x):
+    div = [1]
+	limit = int(x**.5 + 1)
+    for y in range (2, limit):
+	if x%y==0:
+		div.append(y)
+		if x/y != y:
+			div.append(int(x/y))
+    return (sum(div))
+
+#my test of the FindSumOfDiv function based on Project Euler's information
+"""if FindSumOfDiv(284) == 220:
+    if FindSumOfDiv(220) == 284:
+    	print ('it works')
+else:
+    print ('It does not')
+#everything above this line is golden	
+"""
+
+
+
+amicable = []
+sodbynumber = {}
+for z in range (1,10000):
+    sod = FindSumOfDiv(z)
+    if sod < z: #if the sum of divisors is less than the number then I can check whether 
+        if  sodbynumber.get(sod)== z:
+		amicable.append(z)
+                amicable.append(sod)
+    if sod !=1:
+		sodbynumber[z]=sod
+
+print (sum(amicable))
