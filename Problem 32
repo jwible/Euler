@@ -1,0 +1,38 @@
+"""Question:
+We shall say that an n-digit number is pandigital if it makes use of all the digits 1 to n exactly once; for example, the 5-digit number, 15234, is 1 through 5 pandigital.
+The product 7254 is unusual, as the identity, 39 × 186 = 7254, containing multiplicand, multiplier, and product is 1 through 9 pandigital.
+Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital.
+
+HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
+"""
+
+"""
+Applied a mathmatical principle that every multiplication, of (N(1) digits) * (N(2) digits) either equals N(1)+N(2) or N(1)+N(2)+1
+i.e. 10*10 = 100, while 99*99=9801
+So to get a "pandigitial"
+there are only two possibilities
+N1*N4=N4 or N2*N3=N4
+[a,b,c,d,e,f,g,h,i]
+a*bcde=fghi
+ab*cde=fghi
+note: while N4*N1 could also =N4 given we're looking for unique products all permutations would catch both
+"""
+
+import itertools
+answer=[]
+variations=itertools.permutations(['1','2','3','4','5','6','7','8','9'])
+for i in variations:
+    a=int(i[0])
+    b=int(''.join(i[1:5]))
+    c=int(''.join(i[5:9]))
+    if a*b==c:
+        answer.append(c)
+        #print(a, '*',b,' = ', c)
+    d=int(''.join(i[0:2]))
+    e=int(''.join(i[2:5]))
+    if d*e==c:
+        answer.append(c)
+        #print(d, '*',e,' = ', c)
+print(answer)    
+unique=set(answer)
+print(unique, 'sum =', sum(unique))
