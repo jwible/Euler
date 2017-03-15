@@ -7,7 +7,7 @@ HINT: Some products can be obtained in more than one way so be sure to only incl
 """
 
 """
-Applied a mathmatical principle that every multiplication, of (N(1) digits) * (N(2) digits) either equals N(1)+N(2) or N(1)+N(2)+1
+Applied a mathmatical principle that every multiplication, of (N(1) digits) * (N(2) digits) either equals N(1)+N(2) or N(1)+N(2)-1
 i.e. 10*10 = 100, while 99*99=9801
 So to get a "pandigitial"
 there are only two possibilities
